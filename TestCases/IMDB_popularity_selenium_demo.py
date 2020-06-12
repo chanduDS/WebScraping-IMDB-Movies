@@ -6,23 +6,26 @@ from selenium.webdriver import Chrome
 from Base import Initiate_Driver
 from Library import ConfigReader
 
+# Initially taking the genre length using Config reader
 genre_length = ConfigReader.readConfigData('Details','genre_num')
 filename="popular_IMDB_Movies_Popularity.csv"
+
+# opening csv file
 csv_file= open(filename,'w',newline='')
 csv_writer=csv.writer(csv_file)
 csv_writer.writerow(['name','from','to','rating','Tv/Movie','Country Name','Time Duration','Genre','votes','reviews','Meta Score','Certificate','critics','creators','stars','popularity_rank','Popularity up or down'])
 
-
+# taking an empty list of genres
 genres = []
-print("length of genre is ")
-print(genre_length)
+
+# Reading all the genre  from the configuration file and adding them to the list
 for i in range(int(genre_length)):
     gen = "genre"+str(i)
     genres.append(ConfigReader.readConfigData('Genre', gen))
 # we are taking advantage of the url to get different types of content
-print(genres)
+# print(genres)
 for genre in genres:
-    print("genre is ", genre)
+    # print("genre is ", genre)
     # creating their respective files to store data
     links = []
     driver = Initiate_Driver.startbrowser()
@@ -32,8 +35,8 @@ for genre in genres:
     time.sleep(3)
     movies = driver.find_elements_by_xpath("//div[@class='lister-item-content']")
     title_length = len(movies)
-    print(title_length)
-    #taking no of pages to scrape 
+    # print(title_length)
+    # taking no of pages to scrape
     pages=1
     
     for i in range(pages):
@@ -44,7 +47,8 @@ for genre in genres:
 
         # url="https://www.imdb.com/search/title/?genres="+genre+"&start="+str(val)
         url = ConfigReader.read_urls(genre,val)
-        print(url)
+        # print(url)
+        # Getting urls individually by reading from config file
         driver.get(url) # changed
         
 
@@ -102,23 +106,11 @@ for genre in genres:
                 else:
                     a=y[0:4]
                     b="None"    
-            #print(" a : ",a)
-            #print(" b : ",b)
-            #print(tv_movie)
-            #try :   
-              #  driver.find_element_by_xpath("//div[@class='bp_content']")
-              #  tv_movie = "TV Series"
-            #except :
-             #   tv_movie = "Movie"    
+
             lista.append(a) # storing all the 50 from year values on the page
             listb.append(b)  # storing all the 50 to year values on the page
             tvormovie.append(tv_movie) 
-            #try:
-             #   votes=movies[i].find_element_by_xpath("//span[@name='nv']").text
-            #except:
-             #   votes="None"   
-            #voteslist.append(votes)  # storing all the 50 vote values on the page 
-            #print(votes)  
+
                     
         for i in range(len(movies)):
                 
@@ -225,8 +217,6 @@ for genre in genres:
                 certificate = certi[0].text
             except :
                 certificate = "None"
-            #print(certificate)            
-            #print(votes)  
             
 
             # writing in a csv file

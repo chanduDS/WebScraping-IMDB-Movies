@@ -6,23 +6,23 @@ from selenium.webdriver import Chrome
 from Base import Initiate_Driver
 from Library import ConfigReader
 
+# Initially taking the genre length using Config reader
 genre_length = ConfigReader.readConfigData('Details','genre_num')
 filename="Movies_Data.csv"
+# opening csv file
 csv_file= open(filename,'w',newline='')
 csv_writer=csv.writer(csv_file)
 csv_writer.writerow(['name','from','to','rating','Tv/Movie','Country Name','Time Duration','Genre','votes','reviews','Meta Score','Certificate','critics','creators','stars'])
 genres = []
-print("length of genre is ")
-print(genre_length)
+
+# Reading all the genre  from the configuration file and adding them to the list
 for i in range(int(genre_length)):
     gen = "genre"+str(i)
     genres.append(ConfigReader.readConfigData('Genre', gen))
 # we are taking advantage of the url to get different types of content
-print(genres)
+
 
 for genre in genres:
-    
-    #creating their respective files to store data
 
     #creating their respective files to store data
     links = []
@@ -33,7 +33,7 @@ for genre in genres:
     time.sleep(3)
     movies = driver.find_elements_by_xpath("//div[@class='lister-item-content']")
     title_length = len(movies)
-    print(title_length)
+
     pages=1
     links = []
     for i in range(pages):
@@ -42,7 +42,7 @@ for genre in genres:
 
         # url="https://www.imdb.com/search/title/?genres="+genre+"&start="+str(val)
         url = ConfigReader.read_urls(genre,val)
-        print(url)
+        # Getting urls individually by reading from config file
         driver.get(url) # changed
 
         # ** If I am navigating to each title page individually and then come back then I didnot work for me so I first collected the info for all the 50 titles which is present on the main page and 

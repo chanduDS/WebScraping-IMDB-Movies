@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca7ac95-ad62-4100-b725-319238ccf1ac" name="Default Changelist" comment="" />
+    <list default="true" id="9ca7ac95-ad62-4100-b725-319238ccf1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/Initiate_Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Initiate_Driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ConfigReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ConfigReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/IMDB_popularity_selenium_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/IMDB_popularity_selenium_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/Movies_data_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/Movies_data_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/popular_IMDB_Movies_Popularity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/popular_IMDB_Movies_Popularity.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1dA61vtiSOS5aKgxFP5cSEPm9cK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.Initiate_Driver">
