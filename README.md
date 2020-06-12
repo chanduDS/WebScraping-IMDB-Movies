@@ -10,6 +10,4 @@ pip install configparser
 ## Drivers
 Install Chrome and Firefox drivers before running. You can also use headless browsers
 ## Contributing
-## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-. 
