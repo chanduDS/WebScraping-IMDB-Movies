@@ -6,21 +6,20 @@ from selenium.webdriver import Chrome
 from Base import Initiate_Driver
 from Library import ConfigReader
 
-# Initially taking the genre length using Config reader
 genre_length = ConfigReader.readConfigData('Details','genre_num')
-filename="Movies_Data.csv"
-# opening csv file
+filename="../output/Movies_Data.csv"
 csv_file= open(filename,'w',newline='')
 csv_writer=csv.writer(csv_file)
 csv_writer.writerow(['name','from','to','rating','Tv/Movie','Country Name','Time Duration','Genre','votes','reviews','Meta Score','Certificate','critics','creators','stars'])
 genres = []
-
-# Reading all the genre  from the configuration file and adding them to the list
+dict_pages = dict()
+print("length of genre is ")
+print(genre_length)
 for i in range(int(genre_length)):
     gen = "genre"+str(i)
     genres.append(ConfigReader.readConfigData('Genre', gen))
 # we are taking advantage of the url to get different types of content
-
+print(genres)
 
 for genre in genres:
 
@@ -30,11 +29,21 @@ for genre in genres:
     url = ConfigReader.readConfigData('Details','Application_URL')
 
     driver.get(url)
+    total_genre = driver.find_element_by_xpath("//*[@id='main']/div/div[1]/div[2]/span[1]").text
+    total_genre = total_genre.split() # 1,480,556
+    genre_pages = total_genre[2].split(',') # 1480556
+    total_titles = ""
+    for i in genre_pages:
+        total_titles = total_titles + i
+    # print(int(total_titles))
+
     time.sleep(3)
     movies = driver.find_elements_by_xpath("//div[@class='lister-item-content']")
     title_length = len(movies)
-
-    pages=1
+    total_pages = int(total_titles) // int(title_length)
+    print(total_pages)
+    dict_pages[genre] = total_pages
+    pages= total_pages
     links = []
     for i in range(pages):
         val = 1+title_length*i #each page has 50 titles so 50*i
@@ -42,7 +51,7 @@ for genre in genres:
 
         # url="https://www.imdb.com/search/title/?genres="+genre+"&start="+str(val)
         url = ConfigReader.read_urls(genre,val)
-        # Getting urls individually by reading from config file
+        print(url)
         driver.get(url) # changed
 
         # ** If I am navigating to each title page individually and then come back then I didnot work for me so I first collected the info for all the 50 titles which is present on the main page and 

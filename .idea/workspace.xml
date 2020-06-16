@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca7ac95-ad62-4100-b725-319238ccf1ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/Initiate_Driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Initiate_Driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ConfigReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ConfigReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/IMDB_popularity_selenium_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/IMDB_popularity_selenium_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/Movies_data_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/Movies_data_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/popular_IMDB_Movies_Popularity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/popular_IMDB_Movies_Popularity.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../11-06-2020/Project_demo" />
   </component>
   <component name="RunManager" selected="Python.Initiate_Driver">
     <configuration name="ConfigReader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -152,10 +146,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1591885110470" />
-    <state x="926" y="192" key="FileChooserDialogImpl" timestamp="1591855535305">
+    <state x="926" y="192" key="FileChooserDialogImpl" timestamp="1592102365650">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="926" y="192" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1591855535305" />
+    <state x="926" y="192" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592102365650" />
     <state width="1515" height="222" key="GridCell.Tab.0.bottom" timestamp="1591889335397">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -172,9 +166,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="222" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1591889335397" />
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1591884722193">
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1592102351093">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1591884722193" />
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1592102351093" />
   </component>
 </project>
